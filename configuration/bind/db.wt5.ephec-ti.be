@@ -36,7 +36,7 @@ postfixadmin    IN      CNAME   service
 webmail         IN      CNAME   service
 
 ;Serveur sip
-sip.wt5.ephec-ti.be     IN      A       151.80.119.162
+sip.wt5.ephec-ti.be.     IN      A       151.80.119.162
 
 ;Serveur mail
 mail            IN      A       151.80.119.140
