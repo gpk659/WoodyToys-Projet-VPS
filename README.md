@@ -1,5 +1,5 @@
 # ProjetVPS
-##But du projet
+## But du projet
 
 WoodyToys est un projet réalisé dans le cadre du cours d'administration système et réseaux II de l'EPHEC ayant pour but de simuler l'infrastructure informatique d'une société, les étudiants sont amenés à déployer différents services tels que des plateformes webs, un service mail complet ou encore un service de VoIP.
 
