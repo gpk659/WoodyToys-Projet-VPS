@@ -1,0 +1,69 @@
+version: '2'
+services:
+  mailserver:
+    image: hardware/mailserver
+    container_name: mailserver
+    domainname: wt5.ephec-ti.be # Mail server FQDN & reverse = mail.domain.tld.
+    hostname: mail
+    ports:
+      - "25:25" # SMTP - Required
+      - "143:143" # IMAP STARTTLS - Optional - For webmails/desktop clients
+      - "587:587" # Submission STARTTLS - Optional - For webmails/desktop clients
+      - "993:993" # IMAPS SSL/TLS - Optional - For webmails/desktop clients
+      - "4190:4190" # SIEVE STARTTLS - Optional - Recommended for mail filtering
+    environment:
+      - DBPASS=passwdMailEphec
+      - ENABLE_FETCHMAIL=true
+    volumes:
+      - /mnt/docker/mail:/var/mail
+      - /mnt/docker/mail/opendkim:/etc/opendkim/keys
+      - /mnt/docker/nginx/certs/:/etc/letsencrypt
+    depends_on:
+      - mariadb
+  # Administration interface https://github.com/hardware/postfixadmin http://postfixadmin.sourceforge.net/ Configuration : https://github.com/hardware/mailserver/wiki/Postfixadmin-initial-configuration
+  postfixadmin:
+    image: hardware/postfixadmin
+    container_name: postfixadmin
+    domainname: wt5.ephec-ti.be
+    hostname: mail
+    environment:
+      - DBPASS=passwdMailEphec
+    depends_on:
+      - mailserver
+      - mariadb
+  # Webmail (Optional) https://github.com/hardware/rainloop https://www.rainloop.net/ Configuration : https://github.com/hardware/mailserver/wiki/Rainloop-initial-configuration
+  rainloop:
+    image: hardware/rainloop
+    container_name: rainloop
+    volumes:
+      - /mnt/docker/rainloop:/rainloop/data
+    depends_on:
+      - mailserver
+      - mariadb
+  # Web server https://github.com/Wonderfall/dockerfiles/tree/master/nginx https://nginx.org/ Configuration : https://github.com/hardware/mailserver/wiki/Reverse-proxy-configuration
+  nginx:
+    image: wonderfall/boring-nginx
+    container_name: nginx
+    ports:
+      - "80:8000"
+      - "443:4430"
+    volumes:
+      - /mnt/docker/nginx/sites-enabled:/sites-enabled
+      - /mnt/docker/nginx/conf:/conf.d
+      - /mnt/docker/nginx/log:/var/log/nginx
+      - /mnt/docker/nginx/certs:/certs
+    depends_on:
+      - postfixadmin
+      - rainloop
+  # Database https://github.com/docker-library/mariadb https://mariadb.org/
+  mariadb:
+    image: mariadb:10.1
+    container_name: mariadb
+    # restart: always Info : These variables are ignored when the volume already exists (databases created before).
+    environment:
+      - MYSQL_ROOT_PASSWORD=myPassword
+      - MYSQL_DATABASE=postfix
+      - MYSQL_USER=postfix
+      - MYSQL_PASSWORD=passwdMailEphec
+    volumes:
+      - /mnt/docker/mysql/db:/var/lib/mysql
