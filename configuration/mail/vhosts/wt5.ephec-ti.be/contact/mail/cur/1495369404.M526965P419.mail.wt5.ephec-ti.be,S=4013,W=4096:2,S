@@ -1,0 +1,83 @@
+Return-Path: <contact@wt7.ephec-ti.be>
+Delivered-To: <contact@wt5.ephec-ti.be>
+Received: from mail.wt5.ephec-ti.be
+	by mail.wt5.ephec-ti.be (Dovecot) with LMTP id MdQzH7yGIVmjAQAAFQvYqQ
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:23:24 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by mail.wt5.ephec-ti.be (Postfix) with ESMTP id 7376580732E
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:23:24 +0000 (UTC)
+X-Virus-Scanned: Debian amavisd-new at mail.wt5.ephec-ti.be
+X-Spam-Flag: NO
+X-Spam-Score: 1.176
+X-Spam-Level: *
+X-Spam-Status: No, score=1.176 tagged_above=1 required=5
+	tests=[DKIM_SIGNED=0.1, DKIM_VALID=-0.1, DKIM_VALID_AU=-0.1,
+	HTML_MESSAGE=0.001, RDNS_NONE=1.274, TVD_SPACE_RATIO=0.001]
+	autolearn=no autolearn_force=no
+Received: from mail.wt5.ephec-ti.be ([127.0.0.1])
+	by localhost (mail.wt5.ephec-ti.be [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id V6yVWbPHKOSj for <contact@wt5.ephec-ti.be>;
+	Sun, 21 May 2017 12:23:22 +0000 (UTC)
+Received: from mail.wt7.ephec-ti.be (unknown [151.80.119.127])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mail.wt5.ephec-ti.be (Postfix) with ESMTPS id 6D38280732B
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:23:22 +0000 (UTC)
+Authentication-Results: mail.wt5.ephec-ti.be; dmarc=none header.from=wt7.ephec-ti.be
+Authentication-Results: mail.wt5.ephec-ti.be; dkim=pass
+	reason="2048-bit key; unprotected key"
+	header.d=wt7.ephec-ti.be header.i=@wt7.ephec-ti.be
+	header.b=u/QYUY8N; dkim-adsp=pass; dkim-atps=neutral
+Received: from localhost (localhost [127.0.0.1])
+	by mail.wt7.ephec-ti.be (Postfix) with ESMTP id EF19F580703
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:23:21 +0000 (UTC)
+Received: from mail.wt7.ephec-ti.be ([127.0.0.1])
+	by localhost (mail.wt7.ephec-ti.be [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id ErXEBscQeT3y for <contact@wt5.ephec-ti.be>;
+	Sun, 21 May 2017 12:23:21 +0000 (UTC)
+Received: from authenticated-user (mail.wt7.ephec-ti.be [127.0.0.1])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	(Authenticated sender: contact@wt7.ephec-ti.be)
+	by mail.wt7.ephec-ti.be (Postfix) with ESMTPSA id 75805580702
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:23:21 +0000 (UTC)
+Authentication-Results: mail.wt7.ephec-ti.be; dmarc=none header.from=wt7.ephec-ti.be
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=wt7.ephec-ti.be;
+	s=mail; t=1495369401;
+	bh=pallbk/kkURaJWtHrWASTdPsIq3CRZbmlHWTbgWcsl0=;
+	h=Date:From:Subject:To:From;
+	b=u/QYUY8NZhrzQdQCEa6dywFEhSH/3wDN4Z8bNMCMsoRdcBTUYMjjgwF+9JSpjGLR/
+	 rID3S5LmOqtyximlAqZvm9ivC+e2hNwh8eR+Ltrxm6R47ANksirNmTCqSfCWZ/n38N
+	 4zb3wMU4gmugDG1PQigey8vbvm0gowAuYXWPsZOlXDPGkr1pEHtDFKmcBnUogrnOl0
+	 8KJL/7XXsB7v6KvIFqhgee81/e4YtgKDsMS3ORPlbPz0KvxLTWJlwRGwEfH20Cb1fr
+	 4rRfEOrA1renw3ZK0Zgyxw/S8hfdqHocQpD107za3XkxC50RhrRf5MPnnDMqT1z50e
+	 nxkuBZUAurRqQ==
+Mime-Version: 1.0
+Date: Sun, 21 May 2017 12:23:21 +0000
+Content-Type: multipart/alternative;
+ boundary="--=_RainLoop_410_429387777.1495369401"
+Message-ID: <c27ab423ce6c9b97ad44abb61ac21703@cb6d332cb859>
+From: contact@wt7.ephec-ti.be
+Subject: Rock'N'Roll
+To: contact@wt5.ephec-ti.be
+
+
+----=_RainLoop_410_429387777.1495369401
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+https://www.youtube.com/watch?v=3DdQw4w9WgXcQ (https://www.youtube.com/wa=
+tch?v=3DdQw4w9WgXcQ)
+
+----=_RainLoop_410_429387777.1495369401
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head><meta http-equiv=3D"Content-Type" content=3D"t=
+ext/html; charset=3Dutf-8" /></head><body><div data-html-editor-font-wrap=
+per=3D"true" style=3D"font-family: arial, sans-serif; font-size: 13px;"> =
+<signature></signature><br><a href=3D"https://www.youtube.com/watch?v=3Dd=
+Qw4w9WgXcQ">https://www.youtube.com/watch?v=3DdQw4w9WgXcQ</a> </div></bod=
+y></html>
+
+----=_RainLoop_410_429387777.1495369401--

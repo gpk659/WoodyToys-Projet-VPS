@@ -1,0 +1,67 @@
+Return-Path: <contact@wt7.ephec-ti.be>
+Delivered-To: <contact@wt5.ephec-ti.be>
+Received: from mail.wt5.ephec-ti.be
+	by mail.wt5.ephec-ti.be (Dovecot) with LMTP id 5Q1xBuSFIVlqAQAAFQvYqQ
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:19:48 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by mail.wt5.ephec-ti.be (Postfix) with ESMTP id 1412680732E
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:19:48 +0000 (UTC)
+X-Virus-Scanned: Debian amavisd-new at mail.wt5.ephec-ti.be
+X-Spam-Flag: NO
+X-Spam-Score: 1.175
+X-Spam-Level: *
+X-Spam-Status: No, score=1.175 tagged_above=1 required=5
+	tests=[DKIM_SIGNED=0.1, DKIM_VALID=-0.1, DKIM_VALID_AU=-0.1,
+	RDNS_NONE=1.274, URIBL_BLOCKED=0.001] autolearn=no autolearn_force=no
+Received: from mail.wt5.ephec-ti.be ([127.0.0.1])
+	by localhost (mail.wt5.ephec-ti.be [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 65_Y2YHVkRXe for <contact@wt5.ephec-ti.be>;
+	Sun, 21 May 2017 12:19:47 +0000 (UTC)
+Received: from mail.wt7.ephec-ti.be (unknown [151.80.119.127])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mail.wt5.ephec-ti.be (Postfix) with ESMTPS id 569BE80732B
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:19:47 +0000 (UTC)
+Authentication-Results: mail.wt5.ephec-ti.be; dmarc=none header.from=wt7.ephec-ti.be
+Authentication-Results: mail.wt5.ephec-ti.be; dkim=pass
+	reason="2048-bit key; unprotected key"
+	header.d=wt7.ephec-ti.be header.i=@wt7.ephec-ti.be
+	header.b=Xtrkudbq; dkim-adsp=pass; dkim-atps=neutral
+Received: from localhost (localhost [127.0.0.1])
+	by mail.wt7.ephec-ti.be (Postfix) with ESMTP id D3E93580703
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:19:46 +0000 (UTC)
+Received: from mail.wt7.ephec-ti.be ([127.0.0.1])
+	by localhost (mail.wt7.ephec-ti.be [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id 6XF2lyrkemfJ for <contact@wt5.ephec-ti.be>;
+	Sun, 21 May 2017 12:19:45 +0000 (UTC)
+Received: from authenticated-user (mail.wt7.ephec-ti.be [127.0.0.1])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	(Authenticated sender: contact@wt7.ephec-ti.be)
+	by mail.wt7.ephec-ti.be (Postfix) with ESMTPSA id A1B4A580702
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:19:45 +0000 (UTC)
+Authentication-Results: mail.wt7.ephec-ti.be; dmarc=none header.from=wt7.ephec-ti.be
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=wt7.ephec-ti.be;
+	s=mail; t=1495369185;
+	bh=GHL6VSd12HGNNvZG7gp6XDKYYKXBi61vgo9h5OiMBwI=;
+	h=Date:From:Subject:To:In-Reply-To:References:From;
+	b=Xtrkudbqwn8FOLdN4FxbMrM/A3Ns7FeVgpLFRd0UeG6wENoM0J0N7Okf/kvlzrFxi
+	 nft/xq7Of6JLUsL9rok15V7fPruk0k0eJPgyfa4/M4FWv9UfFduTAl7ZaVE0Z+FGri
+	 jLIKEOEPENjtkPLgRK/mxU4CnAMrJe9OFif680e9nuP5LGJTnKeJ3mI6l1myIg/dw6
+	 sz/vZrR5jsa7vBIuUFpsaKOhEXAC6H2qN01IZ2U+hzlZgHXKP/HLTZdoDVsDvfykdT
+	 rWHgh4mhTx9I1P+UAuWEe5XDIJR/79bgMpLEjDRgVSLq7dfa286WIrJRAoJd8lLWQG
+	 l7Vcm3TEzdPqQ==
+Mime-Version: 1.0
+Date: Sun, 21 May 2017 12:19:45 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Message-ID: <e246d60b442bd37fe79cdaca70005ca8@cb6d332cb859>
+From: contact@wt7.ephec-ti.be
+Subject: Re: hello
+To: "contact" <contact@wt5.ephec-ti.be>
+In-Reply-To: <696fa80a-4b60-1e0c-7fcf-ea7544b376b4@wt5.ephec-ti.be>
+References: <696fa80a-4b60-1e0c-7fcf-ea7544b376b4@wt5.ephec-ti.be>
+
+May 21, 2017 2:18 PM, "contact" <contact@wt5.ephec-ti.be> wrote:=0A=0A> b=
+onjour=0A> =0A> greg=0A> =0A> ---=0A> This email has been checked for vir=
+uses by AVG.=0A> http://www.avg.com=0A=0ACoucou petite peruche

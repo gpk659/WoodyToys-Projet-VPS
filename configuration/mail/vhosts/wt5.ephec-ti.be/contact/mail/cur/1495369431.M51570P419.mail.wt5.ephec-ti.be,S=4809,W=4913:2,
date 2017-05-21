@@ -1,0 +1,104 @@
+Return-Path: <gregpyck.ephec@gmail.com>
+Delivered-To: <contact@wt5.ephec-ti.be>
+Received: from mail.wt5.ephec-ti.be
+	by mail.wt5.ephec-ti.be (Dovecot) with LMTP id NdQzH7yGIVmjAQAAFQvYqQ
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:23:51 +0000
+Received: from localhost (localhost [127.0.0.1])
+	by mail.wt5.ephec-ti.be (Postfix) with ESMTP id 07A7B80732E
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:23:51 +0000 (UTC)
+X-Virus-Scanned: Debian amavisd-new at mail.wt5.ephec-ti.be
+X-Spam-Flag: NO
+X-Spam-Score: 1.156
+X-Spam-Level: *
+X-Spam-Status: No, score=1.156 tagged_above=1 required=5
+	tests=[DKIM_SIGNED=0.1, DKIM_VALID=-0.1, DKIM_VALID_AU=-0.1,
+	FREEMAIL_FROM=0.001, HTML_MESSAGE=0.001, RCVD_IN_MSPIKE_H3=-0.01,
+	RCVD_IN_MSPIKE_WL=-0.01, RDNS_NONE=1.274, SPF_PASS=-0.001,
+	URIBL_BLOCKED=0.001] autolearn=no autolearn_force=no
+Received: from mail.wt5.ephec-ti.be ([127.0.0.1])
+	by localhost (mail.wt5.ephec-ti.be [127.0.0.1]) (amavisd-new, port 10024)
+	with ESMTP id gaDbw8OdRAFM for <contact@wt5.ephec-ti.be>;
+	Sun, 21 May 2017 12:23:49 +0000 (UTC)
+Received: from mail-wm0-f47.google.com (unknown [74.125.82.47])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by mail.wt5.ephec-ti.be (Postfix) with ESMTPS id A24BA80732B
+	for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 12:23:49 +0000 (UTC)
+Authentication-Results: mail.wt5.ephec-ti.be; dmarc=pass header.from=gmail.com
+Authentication-Results: mail.wt5.ephec-ti.be; dkim=pass
+	reason="2048-bit key; unprotected key"
+	header.d=gmail.com header.i=@gmail.com header.b=acyP9FxX;
+	dkim-adsp=pass; dkim-atps=neutral
+Received: by mail-wm0-f47.google.com with SMTP id 7so35211569wmo.1
+        for <contact@wt5.ephec-ti.be>; Sun, 21 May 2017 05:23:49 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20161025;
+        h=mime-version:in-reply-to:references:from:date:message-id:subject:to;
+        bh=hVXcue/IV6tkP0ps/pHS89ADbJ+23Q8JgQF84dFWZw4=;
+        b=acyP9FxXHIi8mUp74DpS1eQSG0o8UZSH8ssi7MAdM+uaZ8Op4wM0qkuXc/6cpH25l6
+         oqkozgTqnMxUX/Tre8gq2sGw9Gb1CY/pgX2r65cC+mRgKXHt9cR1cx+lV5xmgS5fOhnI
+         clvjNRMi927e1wz9mB6uqfPXvnMgwrQYWiZvKDxOfkjJ+6HutiFrHRqvqul++nru9nn8
+         flOQ64hodUvW/DePC+xLWdtSG2sjDqJS75AgtRIR9W4mW9n6xT0b8q7mLJKoRNhh5hbf
+         SjXlF7BC8C5phU/W9wJm/olsiq4uLOecrrcG/hQwlgbKudhj9FCDtp2fE2Ui3VWt5VYj
+         BQaA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:in-reply-to:references:from:date
+         :message-id:subject:to;
+        bh=hVXcue/IV6tkP0ps/pHS89ADbJ+23Q8JgQF84dFWZw4=;
+        b=KxcMNnsyxPUxe9mShaHu5egTuj/O9WRu0r10rva9lAA6cduUcxDZz92Tzs4xYtkZQ+
+         xo8NEYlZJFDuj5Zo5povoulu428Jy9t8BsbO0Va4PLkhlcCEagpgdcr+4CBiVeB1Bkg6
+         A+rYyElxIFt6pemmAJbvkd2H1kskJmwTUCfE9q8X9jEzbneH1PRvpsNqVeu/FfKprijS
+         i+D9YpR5qqlTy38WcuilfIhG63oGkbuQTr/b55o2cjcxRxa0Xo9HCCawO+/Nj2EL7KV8
+         YZDV6Jml2gQRu/l7KGJAxhjIdchdivWs8kXQjUKm+VRhjrcmCDy+wznH57FQHoRg2fwH
+         aUvQ==
+X-Gm-Message-State: AODbwcBKzpd5R8GKFacjnOWMGmZYkaFLJR4vln1L+emEmx4BG2ED0H2N
+	OQM201yXmUHu5x7jHTezO1rgrkzAaw==
+X-Received: by 10.223.136.71 with SMTP id e7mr7821994wre.73.1495369428527;
+ Sun, 21 May 2017 05:23:48 -0700 (PDT)
+MIME-Version: 1.0
+Received: by 10.28.137.132 with HTTP; Sun, 21 May 2017 05:23:48 -0700 (PDT)
+In-Reply-To: <f252b989-9171-cf82-c84f-ba789b0c6e38@wt5.ephec-ti.be>
+References: <f252b989-9171-cf82-c84f-ba789b0c6e38@wt5.ephec-ti.be>
+From: The Rider <gregpyck.ephec@gmail.com>
+Date: Sun, 21 May 2017 14:23:48 +0200
+Message-ID: <CAPWu00W95K9V2MrvQ2EX0WEPQ_X_wCpcuu8XphkmqYZ94qoCyg@mail.gmail.com>
+Subject: Re: hello 2
+To: contact <contact@wt5.ephec-ti.be>
+Content-Type: multipart/alternative; boundary="001a1149257c986dec055007d3bd"
+
+--001a1149257c986dec055007d3bd
+Content-Type: text/plain; charset="UTF-8"
+
+hellllooo
+
+2017-05-21 14:23 GMT+02:00 contact <contact@wt5.ephec-ti.be>:
+
+> hello 2 !!
+>
+>
+> ---
+> This email has been checked for viruses by AVG.
+> http://www.avg.com
+>
+>
+
+--001a1149257c986dec055007d3bd
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">hellllooo</div><div class=3D"gmail_extra"><br><div class=
+=3D"gmail_quote">2017-05-21 14:23 GMT+02:00 contact <span dir=3D"ltr">&lt;<=
+a href=3D"mailto:contact@wt5.ephec-ti.be" target=3D"_blank">contact@wt5.eph=
+ec-ti.be</a>&gt;</span>:<br><blockquote class=3D"gmail_quote" style=3D"marg=
+in:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">hello 2 !!<br>
+<br>
+<br>
+---<br>
+This email has been checked for viruses by AVG.<br>
+<a href=3D"http://www.avg.com" rel=3D"noreferrer" target=3D"_blank">http://=
+www.avg.com</a><br>
+<br>
+</blockquote></div><br></div>
+
+--001a1149257c986dec055007d3bd--
