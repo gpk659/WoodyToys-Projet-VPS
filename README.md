@@ -24,7 +24,7 @@ L'utilisation de la plateforme Docker est imposée pour le déploiement des diff
  * Server VoIP Asterisk
  * Service WebDAV NextCloud
 
-## [Documentation Woddy Toys](https://github.com/gpk659/Projet-VPS-EPHEC/wiki)
+## :link: [Documentation Woddy Toys](https://github.com/gpk659/Projet-VPS-EPHEC/wiki)
 
 
 ***
