@@ -31,4 +31,4 @@ L'utilisation de la plateforme Docker est imposée pour le déploiement des diff
 
 
 
- © Pyck Grégory
+ © Groupe 5
