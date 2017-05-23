@@ -15,7 +15,7 @@ L'utilisation de la plateforme Docker est imposée pour le déploiement des diff
 - Chaque service est placé dans son propre container.
 - Installation, Configuration, Validation, Debugging.
 
-## Services mis en places:
+## Services mis en places
 
  * Serveur/Résolveur DNS
  * NGINX WEB,B2B,INTRANET
