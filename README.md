@@ -21,7 +21,7 @@ L'utilisation de la plateforme Docker est imposée pour le déploiement des diff
  * NGINX WEB,B2B,INTRANET
  * NGINX Reverse Proxy
  * Service mail Postfix (divisé en 4 containers)
- * Server VoIP Asterisk
+ * Serveur VoIP Asterisk
  * Service WebDAV NextCloud
 
 ## :link: [Documentation Woddy Toys](https://github.com/gpk659/Projet-VPS-EPHEC/wiki)
