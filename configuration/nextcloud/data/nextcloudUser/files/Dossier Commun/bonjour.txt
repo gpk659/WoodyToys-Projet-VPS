@@ -1,0 +1,18 @@
+﻿-- secretaire --
+bonjour tout le monde
+-- 		--
+
+bonjour
+ceci
+est 
+un 
+test
+
+-- FIN DU TEST --
+
+
+bonjour
+
+ce dossier est bien partagé
+
+-- comptable --
