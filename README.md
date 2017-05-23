@@ -20,7 +20,7 @@ L'utilisation de la plateforme Docker est imposée pour le déploiement des diff
  * Serveur/Résolveur DNS
  * NGINX WEB,B2B,INTRANET
  * NGINX Reverse Proxy
- * Service mail Postfix (divisé en 5 containers)
+ * Service mail Postfix (divisé en 4 containers)
  * Server VoIP Asterisk
  * Service WebDAV NextCloud
 
