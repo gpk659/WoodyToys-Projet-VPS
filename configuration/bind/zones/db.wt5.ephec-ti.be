@@ -12,15 +12,15 @@ $ORIGIN wt5.ephec-ti.be.
 				3h)	;
 
 ;NS RECORDS
-	IN	NS	ns1.wt5.ephec-ti.be.
-	IN	NS	ns2.wt5.ephec-ti.be.
+	IN	NS	ns1.wt5.ephec-ti.be.		;Utilisé pour définir quels serveurs répondent pour cette zone. 
+	IN	NS	ns2.wt5.ephec-ti.be.		;Cet enregistrement doit pointer vers un enregistrement de type A, non pas vers un enregistrement de type CNAME.
 	IN	NS	ns3.wt5.ephec-ti.be.
 	IN	MX	10	mail.wt5.ephec-ti.be.	;Utilisé pour définir vers quel serveur de la zone un email à destination du domaine doit être envoyé, 
 							;et avec quelle priorité. Cet enregistrement doit pointer vers un enregistrement de type A, et non un alias CNAME. 
 							;Il peut y avoir plusieurs enregistrements MX si il existe plusieurs serveurs de messagerie sur le domaine.
 
 ;A Records
-ns1	IN	A	151.80.119.132
+ns1	IN	A	151.80.119.132			; Cet enregistrement fait correspondre une adresse IP à un nom de machine.
 ns2	IN	A	151.80.119.140
 ns3	IN	A	151.80.119.162
 
@@ -30,7 +30,7 @@ ns3	IN	A	151.80.119.162
 web		IN	A	151.80.119.132 ;VPS de greg
 service		IN	A	151.80.119.140 ;VPS de noe
 
-www		IN	CNAME	web
+www		IN	CNAME	web			; Utilisé pour créer un alias depuis un enregistrement de type A.
 b2b		IN	CNAME	web
 intranet	IN	CNAME	web
 postfixadmin	IN	CNAME	service
