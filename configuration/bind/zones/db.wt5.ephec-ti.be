@@ -15,7 +15,9 @@ $ORIGIN wt5.ephec-ti.be.
 	IN	NS	ns1.wt5.ephec-ti.be.
 	IN	NS	ns2.wt5.ephec-ti.be.
 	IN	NS	ns3.wt5.ephec-ti.be.
-	IN	MX	10	mail.wt5.ephec-ti.be.
+	IN	MX	10	mail.wt5.ephec-ti.be.	;Utilisé pour définir vers quel serveur de la zone un email à destination du domaine doit être envoyé, 
+							;et avec quelle priorité. Cet enregistrement doit pointer vers un enregistrement de type A, et non un alias CNAME. 
+							;Il peut y avoir plusieurs enregistrements MX si il existe plusieurs serveurs de messagerie sur le domaine.
 
 ;A Records
 ns1	IN	A	151.80.119.132
