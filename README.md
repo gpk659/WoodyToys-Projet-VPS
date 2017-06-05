@@ -25,7 +25,7 @@ L'utilisation de la plateforme Docker est imposée pour le déploiement des diff
  * Service WebDAV NextCloud
  * Proxy Squid
 
-## :link: [Documentation Woddy Toys](https://github.com/gpk659/Projet-VPS-EPHEC/wiki)
+ :link: [Documentation Woddy Toys](https://github.com/gpk659/Projet-VPS-EPHEC/wiki)
 
 
 ***
