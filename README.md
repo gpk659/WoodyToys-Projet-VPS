@@ -23,6 +23,7 @@ L'utilisation de la plateforme Docker est imposée pour le déploiement des diff
  * Service mail Postfix (divisé en 4 containers)
  * Serveur VoIP Asterisk
  * Service WebDAV NextCloud
+ * Proxy Squid
 
 ## :link: [Documentation Woddy Toys](https://github.com/gpk659/Projet-VPS-EPHEC/wiki)
 
